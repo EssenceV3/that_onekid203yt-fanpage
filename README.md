@@ -1,36 +1,120 @@
-# that_onekid203YT Fan Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>that_onekid203YT - Fan Page</title>
+  <link rel="icon" href="https://i.imgur.com/8i6ySoq.png" type="image/png" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #00ff99;
+      font-size: 2.5rem;
+    }
+    nav {
+      text-align: center;
+      margin: 20px;
+    }
+    nav a {
+      color: #00ff99;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      margin-bottom: 20px;
+      border: none;
+    }
+    footer {
+      background-color: #1f1f1f;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      color: #aaa;
+    }
+    a.discord {
+      display: inline-block;
+      background-color: #7289da;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to that_onekid203YT's Fan Page!</h1>
+    <p>Fan site for an awesome Minecraft YouTuber!</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#videos">Videos</a>
+    <a href="https://discord.gg/hQyVjkZw" target="_blank" class="discord">Join the Discord</a>
+  </nav>
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to the fan page of <strong>that_onekid203YT</strong>! Check out his Minecraft content, enjoy his videos, and join the community!</p>
+  </section>
+  <section id="about">
+    <h2>About the YouTuber</h2>
+    <p><strong>that_onekid203YT</strong> is a rising Minecraft content creator on YouTube who delivers fun, high-energy videos for fans of all ages. Known for his entertaining gameplay, funny moments, and creative builds, he’s quickly gaining recognition in the Minecraft community.</p>
+    <p>Whether you love survival, PvP, or just want to laugh along with his awesome content, this is the YouTuber to watch. He’s active, engaging, and always bringing something new to the table!</p>
+    <p>👉 <a href="https://www.youtube.com/@that_onekid203yt" target="_blank" style="color: #00ff99; text-decoration: underline;">Subscribe to his channel here</a></p>
+  </section>
+  <section id="videos">
+    <h2>Latest Videos</h2>
+    <iframe src="https://www.youtube.com/embed/f2CONBYvTzo" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Beo-7Gi32ew" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/qBdnGGcUmK4" allowfullscreen></iframe>
+  </section>
+  <footer>
+    <p>&copy; 2025 Fan page for that_onekid203YT. This is a fan-made site.</p>
+  </footer>
 
-This is a fan-made website dedicated to the YouTuber **that_onekid203YT**, who creates awesome Minecraft content.
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.1 });
 
-## About
-
-that_onekid203YT is a rising Minecraft YouTuber known for his entertaining gameplay, creative builds, and fun videos. This fan page showcases some of his latest videos and provides links to join his community.
-
-## Features
-
-- Welcome home section
-- About the YouTuber with a brief bio
-- Embedded latest YouTube videos
-- Link to Discord server for fans
-
-## How to View
-
-1. Open the `index.html` file in any modern web browser, or
-2. Host the files on any static site hosting service (Netlify, GitHub Pages, etc.)
-
-## Deployment on GitHub Pages
-
-1. Create a new GitHub repository.
-2. Upload the `index.html` file (and this README.md).
-3. Go to **Settings** → **Pages**.
-4. Select the branch and folder (usually `main` / root).
-5. Save and visit your GitHub Pages URL.
-
-## Links
-
-- YouTube Channel: [that_onekid203YT](https://www.youtube.com/@that_onekid203yt)
-- Discord Server: [Join here](https://discord.gg/hQyVjkZw)
-
----
-
-*This site is a fan project and is not officially affiliated with that_onekid203YT.*
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</body>
+</html>
